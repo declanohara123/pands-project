@@ -21,3 +21,8 @@
 import numpy as np
 import pandas as pd
 import matplotlib as plt
+import csv
+
+iris_data = pd.read_csv('iris.csv')
+
+iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width", "species"]
