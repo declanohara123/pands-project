@@ -26,3 +26,8 @@ import csv
 iris_data = pd.read_csv('iris.csv')
 
 iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width", "species"]
+
+
+summary = iris_data.describe()
+summary = summary.transpose()
+print(summary.head())
