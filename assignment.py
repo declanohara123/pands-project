@@ -33,11 +33,59 @@ iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width
 #summary = summary.transpose()
 #print(summary.head())
 
+#summary of sepal lenght = open("summary of iris data.txt", "w")
+#file.print(iris_data["sepal lenght"].describe())
+  #  file.close
+
 #print(iris_data["sepal lenght"].describe())
 #print(iris_data["sepal width"].describe())
 #print(iris_data["petal lenght"].describe())
 #print(iris_data["petal width"].describe())
 
-plt.plot(iris_data["sepal lenght"], iris_data["petal width"])
+#sns.pairplot(iris_data,  hue="species", kind="scatter")
 
+#plt.show()
+
+#plt.close()
+#f = open("Sepal Lenght Summary.txt", "a")
+#f.write(print(iris_data["sepal lenght"].describe()))
+#f.close()
+
+#stdout = open("test.txt", "w")
+#print(iris_data["sepal lenght"].describe())
+#stdout. close()
+
+#with open("iris.csv") as f:
+ #   with open("sepal lenght.txt", "w") as f1:
+  #      for line in f:
+   #         f1.write("iris data")
+
+
+#g = print(iris_data["sepal lenght"].describe())
+
+#f = open("Sepal Lenght Summary.txt", "a")
+#f.write("g")
+#f.close()
+
+#plt.scatter(iris_data['sepal lenght'], iris_data['sepal width'])
+#plt.title('Sepal Lenght versus Sepal Width')
+#plt.show()
+
+#plt.scatter(iris_data['sepal lenght'], iris_data['petal lenght'])
+#plt.title('Sepal lenght versus Petal lenght')
+#plt.show()
+
+#plt.scatter(iris_data['sepal lenght'], iris_data['petal width'])
+#plt.title('sepal lenght versus petal width')
+#plt.show()
+
+#plt.scatter(iris_data['sepal width'], iris_data['petal width'])
+#plt.title('sepal width versus width width')
+#plt.show()
+
+#iris_data.hist(column='petal lenght', by='species', bins=40)
+
+#plt.show()
+
+sns.pairplot(iris_data, hue='species', vars=['sepal width', 'sepal lenght'], diag_kind="kde")
 plt.show()
