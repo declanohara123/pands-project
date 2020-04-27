@@ -1,22 +1,12 @@
 ## assignment
-#
-# to investigate the Fisher's iris data set.
-# investigate the data
-# come to conclusions based on data
-# print images of data
-#
-# data set of 150 pieces of info
-# 
-# sepal lenght
-# sepal width
-# petal lenght
-# petal width
-# all measureed in cm
 
+# to investigate the Fisher's iris data set.
+# investigate the data, come to conclusions based on data
+# print images of data
+# data set of 150 pieces of info
+# sepal lenght, sepal width, petal lenght, petal width, all measureed in cm
 # three different species
-# iris setosa
-# iris versicolour
-# iris virginica
+# iris setosa, iris versicolour, iris virginica
 
 import numpy as np
 import pandas as pd
@@ -57,26 +47,26 @@ iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width
 
 # scatterplot of each pair of variables segregated by species into different colours
 # x is x axis data, y is y axis data, hue allowsus to differentiate based on the 'species'
-# data is taken from original file
-# ref for figuring this out https://towardsdatascience.com/data-visualization-using-seaborn-fc24db95a850
+# data is taken from original file iris_data
+# height and aspect changed from standard 5 and 1 repectively to make it open in a bigger window
+# this change in size is due to the x axis in the smaller version being too cramped
+# ref for figuring this out https://seaborn.pydata.org/generated/seaborn.catplot.html
 
-
-
-sns.catplot(x='petal lenght',y='petal width',hue='species', data=iris_data, )
+sns.catplot(x='petal lenght',y='petal width',hue='species', data=iris_data, height=8.5, aspect=1.75)
 plt.show()
 
-sns.catplot(x='petal lenght',y='sepal width',hue='species', data=iris_data)
-plt.show()
+#sns.catplot(x='petal lenght',y='sepal width',hue='species', data=iris_data)
+#plt.show()
 
-sns.catplot(x='petal lenght',y='sepal lenght',hue='species', data=iris_data)
-plt.show()
+#sns.catplot(x='petal lenght',y='sepal lenght',hue='species', data=iris_data)
+#plt.show()
 
-sns.catplot(x='petal width',y='sepal lenght',hue='species', data=iris_data)
-plt.show()
+#sns.catplot(x='petal width',y='sepal lenght',hue='species', data=iris_data)
+#plt.show()
 
-sns.catplot(x='petal width',y='sepal width',hue='species', data=iris_data)
-plt.show()
+#sns.catplot(x='petal width',y='sepal width',hue='species', data=iris_data)
+#plt.show()
 
-sns.catplot(x='sepal lenght',y='sepal width',hue='species', data=iris_data)
-plt.show()
+#sns.catplot(x='sepal lenght',y='sepal width',hue='species', data=iris_data)
+#plt.show()
 
