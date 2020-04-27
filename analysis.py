@@ -49,35 +49,34 @@ iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width
 
 
 
-#sns.pairplot(iris_data,  hue="species", kind="scatter")
-
-#plt.show()
-
-#plt.close()
+#save a histogram of each variable to a .png file
 
 
 
-#plt.scatter(iris_data['sepal lenght'], iris_data['sepal width'])
-#plt.title('Sepal Lenght versus Sepal Width')
-#plt.show()
 
-#plt.scatter(iris_data['sepal lenght'], iris_data['petal lenght'])
-#plt.title('Sepal lenght versus Petal lenght')
-#plt.show()
 
-#plt.scatter(iris_data['sepal lenght'], iris_data['petal width'])
-#plt.title('sepal lenght versus petal width')
-#plt.show()
+# scatterplot of each pair of variables segregated by species into different colours
+# x is x axis data, y is y axis data, hue allowsus to differentiate based on the 'species'
+# data is taken from original file
+# ref for figuring this out https://towardsdatascience.com/data-visualization-using-seaborn-fc24db95a850
 
-#plt.scatter(iris_data['sepal width'], iris_data['petal width'])
-#plt.title('sepal width versus width width')
-#plt.show()
 
-#iris_data.hist(column='petal lenght', by='species', bins=40)
 
-#plt.show()
+sns.catplot(x='petal lenght',y='petal width',hue='species', data=iris_data, )
+plt.show()
 
-#sns.pairplot(iris_data, hue='species', vars=['sepal width', 'sepal lenght'], diag_kind="kde")
-#plt.show()
+sns.catplot(x='petal lenght',y='sepal width',hue='species', data=iris_data)
+plt.show()
 
+sns.catplot(x='petal lenght',y='sepal lenght',hue='species', data=iris_data)
+plt.show()
+
+sns.catplot(x='petal width',y='sepal lenght',hue='species', data=iris_data)
+plt.show()
+
+sns.catplot(x='petal width',y='sepal width',hue='species', data=iris_data)
+plt.show()
+
+sns.catplot(x='sepal lenght',y='sepal width',hue='species', data=iris_data)
+plt.show()
 
