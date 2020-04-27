@@ -41,18 +41,26 @@ iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width
 
 #save a histogram of each variable to a .png file
 
+#plt.show()
+#plt.savefig('Histogram of....png')
 
 
 
-
-# scatterplot of each pair of variables segregated by species into different colours
-# x is x axis data, y is y axis data, hue allowsus to differentiate based on the 'species'
+## scatterplot of each pair of variables segregated by species into different colours
+# x is x axis data, y is y axis data, hue allows us to differentiate based on the 'species'
 # data is taken from original file iris_data
-# height and aspect changed from standard 5 and 1 repectively to make it open in a bigger window
-# this change in size is due to the x axis in the smaller version being too cramped
-# ref for figuring this out https://seaborn.pydata.org/generated/seaborn.catplot.html
+# the plt.suptitle adds the title to the graph
+# manger = plt.get_current figure, manager.window.showMaximised() makes the new figure pop up in full screen mode
+# ref for this is https://stackoverflow.com/questions/32428193/saving-matplotlib-graphs-to-image-as-full-screen
+# ref for figuring the graphs https://seaborn.pydata.org/generated/seaborn.catplot.html
+# set style 'ticks' makes the images easier to read by increasing the contrast of the points
 
-sns.catplot(x='petal lenght',y='petal width',hue='species', data=iris_data, height=8.5, aspect=1.75)
+sns.set_style('ticks')
+
+sns.catplot(x='petal lenght',y='petal width',hue='species', data=iris_data, height=7, aspect=1.25)
+plt.suptitle('Petal Lenght versus Petal Width')
+manager = plt.get_current_fig_manager()
+manager.window.showMaximized()
 plt.show()
 
 #sns.catplot(x='petal lenght',y='sepal width',hue='species', data=iris_data)
