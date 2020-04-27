@@ -28,44 +28,34 @@ iris_data = pd.read_csv('iris.csv')
 
 iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width", "species"]
 
+# file=open creates a new file in the current directory named whatever is in "" after the bracket
+# the .txt after the standard names makes the new file a text file
+# "w" is the write function which allows us to populate the file with data
+# file.write is the command to write the follwing sequence
+# due to describe being an output and not a string it has to be given the f function and put in curly brackets
+# this allows python to determine the output and add it to the rest of the sentence I've typed as a string
 
-#summary = iris_data.describe()
-#summary = summary.transpose()
-#print(summary.head())
+#file=open("Summary of Sepal Lenght.txt", "w")
+#file.write(f'The summary of Sepal Lenght is {iris_data["sepal lenght"].describe()}\n')
 
-#summary of sepal lenght = open("summary of iris data.txt", "w")
-#file.print(iris_data["sepal lenght"].describe())
-  #  file.close
+#file=open("Summary of Sepal Width.txt", "w")
+#file.write(f'The summary of Sepal Width is {iris_data["sepal width"].describe()}\n')
 
-#print(iris_data["sepal lenght"].describe())
-#print(iris_data["sepal width"].describe())
-#print(iris_data["petal lenght"].describe())
-#print(iris_data["petal width"].describe())
+#file=open("Summary of Petal Lenght.txt", "w")
+#file.write(f'The summary of Petal Lenght is {iris_data["petal lenght"].describe()}\n')
+
+#file=open("Summary of Petal Width.txt", "w")
+#file.write(f'The summary of Petal Width is {iris_data["petal width"].describe()}\n')
+
+
 
 #sns.pairplot(iris_data,  hue="species", kind="scatter")
 
 #plt.show()
 
 #plt.close()
-#f = open("Sepal Lenght Summary.txt", "a")
-#f.write(print(iris_data["sepal lenght"].describe()))
-#f.close()
-
-#stdout = open("test.txt", "w")
-#print(iris_data["sepal lenght"].describe())
-#stdout. close()
-
-#with open("iris.csv") as f:
- #   with open("sepal lenght.txt", "w") as f1:
-  #      for line in f:
-   #         f1.write("iris data")
 
 
-#g = print(iris_data["sepal lenght"].describe())
-
-#f = open("Sepal Lenght Summary.txt", "a")
-#f.write("g")
-#f.close()
 
 #plt.scatter(iris_data['sepal lenght'], iris_data['sepal width'])
 #plt.title('Sepal Lenght versus Sepal Width')
@@ -87,5 +77,7 @@ iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width
 
 #plt.show()
 
-sns.pairplot(iris_data, hue='species', vars=['sepal width', 'sepal lenght'], diag_kind="kde")
-plt.show()
+#sns.pairplot(iris_data, hue='species', vars=['sepal width', 'sepal lenght'], diag_kind="kde")
+#plt.show()
+
+
