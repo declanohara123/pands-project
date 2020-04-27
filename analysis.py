@@ -16,7 +16,7 @@ import seaborn as sns
 
 iris_data = pd.read_csv('iris.csv')
 
-iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width", "species"]
+iris_data.columns = ["Sepal Lenght", "Sepal Width", "Petal Lenght", "Petal Width", "Species"]
 
 # file=open creates a new file in the current directory named whatever is in "" after the bracket
 # the .txt after the standard names makes the new file a text file
@@ -49,6 +49,7 @@ iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width
 ## scatterplot of each pair of variables segregated by species into different colours
 # x is x axis data, y is y axis data, hue allows us to differentiate based on the 'species'
 # data is taken from original file iris_data
+# height and aspect altered from 5 and 1 respectively to alter the image output
 # the plt.suptitle adds the title to the graph
 # manger = plt.get_current figure, manager.window.showMaximised() makes the new figure pop up in full screen mode
 # ref for this is https://stackoverflow.com/questions/32428193/saving-matplotlib-graphs-to-image-as-full-screen
@@ -57,24 +58,38 @@ iris_data.columns = ["sepal lenght", "sepal width", "petal lenght", "petal width
 
 sns.set_style('ticks')
 
-sns.catplot(x='petal lenght',y='petal width',hue='species', data=iris_data, height=7, aspect=1.25)
+sns.catplot(x='Petal Lenght',y='Petal Width',hue='Species', data=iris_data, height=7, aspect=1.25)
 plt.suptitle('Petal Lenght versus Petal Width')
 manager = plt.get_current_fig_manager()
 manager.window.showMaximized()
 plt.show()
 
-#sns.catplot(x='petal lenght',y='sepal width',hue='species', data=iris_data)
-#plt.show()
+sns.catplot(x='Petal Lenght',y='Sepal Width',hue='Species', data=iris_data, height=7, aspect=1.25)
+plt.suptitle('Petal Lenght versus Sepal Width')
+manager = plt.get_current_fig_manager()
+manager.window.showMaximized()
+plt.show()
 
-#sns.catplot(x='petal lenght',y='sepal lenght',hue='species', data=iris_data)
-#plt.show()
+sns.catplot(x='Petal Lenght',y='Sepal Lenght',hue='Species', data=iris_data, height=7, aspect=1.25)
+plt.suptitle('Petal Lenght versus Sepal Lenght')
+manager = plt.get_current_fig_manager()
+manager.window.showMaximized()
+plt.show()
 
-#sns.catplot(x='petal width',y='sepal lenght',hue='species', data=iris_data)
-#plt.show()
+sns.catplot(x='Petal Width',y='Sepal Width',hue='Species', data=iris_data, height=7, aspect=1.25)
+plt.suptitle('Petal Width versus Sepal Width')
+manager = plt.get_current_fig_manager()
+manager.window.showMaximized()
+plt.show()
 
-#sns.catplot(x='petal width',y='sepal width',hue='species', data=iris_data)
-#plt.show()
+sns.catplot(x='Petal Width',y='Sepal Lenght',hue='Species', data=iris_data, height=7, aspect=1.25)
+plt.suptitle('Petal Width versus Sepal Lenght')
+manager = plt.get_current_fig_manager()
+manager.window.showMaximized()
+plt.show()
 
-#sns.catplot(x='sepal lenght',y='sepal width',hue='species', data=iris_data)
-#plt.show()
-
+sns.catplot(x='Sepal Lenght',y='Sepal Width',hue='Species', data=iris_data, height=7, aspect=1.25)
+plt.suptitle('Sepal Lenght versus Sepal Width')
+manager = plt.get_current_fig_manager()
+manager.window.showMaximized()
+plt.show()
