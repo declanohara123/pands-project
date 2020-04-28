@@ -13,10 +13,6 @@ import matplotlib.pyplot as plt
 import csv
 import seaborn as sns
 
-# set style 'ticks' makes the images easier to read by increasing the contrast of the points, allegedly
-
-sns.set_style('ticks')
-
 iris_data = pd.read_csv('iris.csv')
 
 iris_data.columns = ["Sepal Lenght", "Sepal Width", "Petal Lenght", "Petal Width", "Species"]
@@ -52,22 +48,31 @@ file.write(f'The summary of Petal Width is {iris_data["Petal Width"].describe()}
 # vars= as mentioned above seperated out the variables to graph
 # height changes the size out put of the image
 # plt.suptitle = gives the graph a name and fontsize allters the size of given name
+# pltclose() is added at the end of each graph as the next plt.show() function in part of the next section
+# this kept putting up these graphs when I didn't want to so had to add it in
+# set style 'ticks' makes the images easier to read by increasing the contrast of the points, allegedly
+
+sns.set_style('ticks')
 
 sns.pairplot(iris_data, hue='Species', vars=['Sepal Lenght'], height=7)
 plt.suptitle('Figure 1.1: KDE of Sepal Lenght versus Sepal Lenght', fontsize=10)
 plt.savefig('Figure 1.1. KDE of Sepal Lenght.png')
+plt.close()
 
 sns.pairplot(iris_data, hue='Species', vars=['Sepal Width'], height=7)
 plt.suptitle('Figure 1.2: KDE of Sepal Width versus Sepal Width', fontsize=10)
 plt.savefig('Figure 1.2. KDE of Sepal Width.png')
+plt.close()
 
 sns.pairplot(iris_data, hue='Species', vars=['Petal Lenght'], height=7)
 plt.suptitle('Figure 1.3: KDE of Petal Lenght versus Petal Lenght', fontsize=10)
 plt.savefig('Figure 1.3. KDE of Petal Lenght.png')
+plt.close()
 
 sns.pairplot(iris_data, hue='Species', vars=['Petal Width'], height=7)
 plt.suptitle('Figure 1.4: KDE of Petal Width versus Petal Width', fontsize=10)
 plt.savefig('Figure 1.4. KDE of Petal Width.png')
+plt.close()
 
 
 ## scatterplot of each pair of variables segregated by species into different colours
@@ -78,6 +83,9 @@ plt.savefig('Figure 1.4. KDE of Petal Width.png')
 # manger = plt.get_current figure, manager.window.showMaximised() makes the new figure pop up in full screen mode
 # ref for this is https://stackoverflow.com/questions/32428193/saving-matplotlib-graphs-to-image-as-full-screen
 # ref for figuring the graphs https://seaborn.pydata.org/generated/seaborn.catplot.html
+# set style 'ticks' makes the images easier to read by increasing the contrast of the points, allegedly
+
+sns.set_style('ticks')
 
 sns.catplot(x='Petal Lenght',y='Petal Width',hue='Species', data=iris_data, height=7, aspect=1.25)
 plt.suptitle('Figur 2.1: Petal Lenght versus Petal Width')
