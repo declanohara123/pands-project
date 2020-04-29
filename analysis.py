@@ -34,7 +34,7 @@ file.write(f'The summary of the Sepal Width is {iris_data["Sepal Width"].describ
 file=open("Table 3. Summary of Petal Lenght.txt", "w")
 file.write(f'The summary of the Petal Lenght is {iris_data["Petal Lenght"].describe()}\n')
 
-file=open("table 4. Summary of Petal Width.txt", "w")
+file=open("Table 4. Summary of Petal Width.txt", "w")
 file.write(f'The summary of the Petal Width is {iris_data["Petal Width"].describe()}\n')
 
 
