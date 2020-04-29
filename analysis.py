@@ -26,16 +26,16 @@ iris_data.columns = ["Sepal Lenght", "Sepal Width", "Petal Lenght", "Petal Width
 # this allows python to determine the output and add it to the rest of the sentence I've typed as a string
 
 file=open("Table 1. Summary of Sepal Lenght.txt", "w")
-file.write(f'The summary of Sepal Lenght is {iris_data["Sepal Lenght"].describe()}\n')
+file.write(f'The summary of the Sepal Lenght is {iris_data["Sepal Lenght"].describe()}\n')
 
 file=open("Table 2. Summary of Sepal Width.txt", "w")
-file.write(f'The summary of Sepal Width is {iris_data["Sepal Width"].describe()}\n')
+file.write(f'The summary of the Sepal Width is {iris_data["Sepal Width"].describe()}\n')
 
 file=open("Table 3. Summary of Petal Lenght.txt", "w")
-file.write(f'The summary of Petal Lenght is {iris_data["Petal Lenght"].describe()}\n')
+file.write(f'The summary of the Petal Lenght is {iris_data["Petal Lenght"].describe()}\n')
 
 file=open("table 4. Summary of Petal Width.txt", "w")
-file.write(f'The summary of Petal Width is {iris_data["Petal Width"].describe()}\n')
+file.write(f'The summary of the Petal Width is {iris_data["Petal Width"].describe()}\n')
 
 
 ## save a Kernel density estimation of each variable to a .png file
